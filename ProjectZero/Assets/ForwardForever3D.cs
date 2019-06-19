@@ -10,9 +10,10 @@ public class ForwardForever3D : MonoBehaviour
 
     public float forwardForce = 2000f;
     public float sidewaysForce = 500f;
-    public float jumpForce = 1000000f;
+    public float jumpForce = 100f;
 
     public bool canJump = true;
+    public bool onGround;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -21,21 +22,21 @@ public class ForwardForever3D : MonoBehaviour
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
         //if d or right arrow is pressed, apply a sideways force to the right
-        if (Input.GetKey("d") || Input.GetKey("right"))
+        if (Input.GetKeyDown("d") || Input.GetKeyDown("right"))
         {
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
 
         }
 
         //if a or left arrow is pressed, apply a sideways force to the left
-        if (Input.GetKey("a") || Input.GetKey("left"))
+        if (Input.GetKeyDown("a") || Input.GetKeyDown("left"))
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
 
         }
 
         //if space, w or up arrow is pressed, call function jump
-        if (Input.GetKey("w") || Input.GetKey("up") || Input.GetKey("space"))
+        if (Input.GetKeyDown("w") || Input.GetKeyDown("up") || Input.GetKeyDown("space"))
         {
             Debug.Log("Input Triggered");
             Jump();
@@ -44,12 +45,23 @@ public class ForwardForever3D : MonoBehaviour
 
     public void Jump()
     {
-        Debug.Log("Function Called: y =" + transform.position.y);
-        //check to make sure that y = 1 and the player is allowed to jump
-        if (transform.position.y == 1f)
+        Debug.Log(onGround);
+        if (onGround)
         {
             Debug.Log("Passed Inspection");
             rb.AddForce(0, jumpForce, 0);
+        }
+    }
+
+    void OnCollisionStay(Collision other)
+
+    {
+        if (other.gameObject.layer != 9)
+        {
+            onGround = false;
+        }else if (other.gameObject.layer == 9)
+        {
+            onGround = true; //Add the jumping mechanic back in.
         }
     }
 }
