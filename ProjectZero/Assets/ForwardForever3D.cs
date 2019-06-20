@@ -46,22 +46,10 @@ public class ForwardForever3D : MonoBehaviour
     public void Jump()
     {
         Debug.Log(onGround);
-        if (onGround)
+        if (rb.velocity.y == 0f)
         {
             Debug.Log("Passed Inspection");
             rb.AddForce(0, jumpForce, 0);
-        }
-    }
-
-    void OnCollisionStay(Collision other)
-
-    {
-        if (other.gameObject.layer != 9)
-        {
-            onGround = false;
-        }else if (other.gameObject.layer == 9)
-        {
-            onGround = true; //Add the jumping mechanic back in.
         }
     }
 }
