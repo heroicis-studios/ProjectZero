@@ -13,7 +13,6 @@ public class ForwardForever3D : MonoBehaviour
     public float jumpForce = 100f;
 
     public bool canJump = true;
-    public bool onGround;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -38,17 +37,16 @@ public class ForwardForever3D : MonoBehaviour
         //if space, w or up arrow is pressed, call function jump
         if (Input.GetKeyDown("w") || Input.GetKeyDown("up") || Input.GetKeyDown("space"))
         {
-            Debug.Log("Input Triggered");
             Jump();
         }
     }
 
     public void Jump()
     {
-        Debug.Log(onGround);
+        //check to see if the players velocity on the y-axis is 0
         if (rb.velocity.y == 0f)
         {
-            Debug.Log("Passed Inspection");
+            //apply the jump force
             rb.AddForce(0, jumpForce, 0);
         }
     }
