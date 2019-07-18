@@ -12,7 +12,7 @@ public class PlayerObstacle : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //checking the 'layer' that the object we collided with is on
-        if (collision.collider.gameObject.layer == 9) {
+        if (collision.collider.gameObject.layer == 10) {
             die.Die();
         }
     }

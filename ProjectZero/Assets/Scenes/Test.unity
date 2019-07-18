@@ -327,27 +327,13 @@ GameObject:
   - component: {fileID: 900422831}
   - component: {fileID: 900422830}
   - component: {fileID: 900422829}
-  - component: {fileID: 900422828}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &900422828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900422827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7675af1b62fab949ac2a90877d2c867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  die: {fileID: 1338498952}
 --- !u!65 &900422829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -420,25 +406,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1338498946 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2670230739050164410, guid: fc1583b14e62dd142ae13e84b2c51e0c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2670230739067393722}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1338498952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338498946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ab179994dcfe104e99c232b8e74987f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathHeight: -10
 --- !u!1 &1807518950
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +418,7 @@ GameObject:
   - component: {fileID: 1807518953}
   - component: {fileID: 1807518952}
   - component: {fileID: 1807518951}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,11 +563,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2670230739050164411, guid: fc1583b14e62dd142ae13e84b2c51e0c,
-        type: 3}
-      propertyPath: sidewaysForce
-      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc1583b14e62dd142ae13e84b2c51e0c, type: 3}
