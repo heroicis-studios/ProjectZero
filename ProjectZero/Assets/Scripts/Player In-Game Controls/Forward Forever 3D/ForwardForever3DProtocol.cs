@@ -1,18 +1,21 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ForwardForever3DProtocol : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Transform protocol;
+    public Vector3 offset;
+
+    private Transform player;
+
+    private void Start()
     {
-        
+        player = GetComponent<Transform>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void LateUpdate()
     {
-        
+        protocol.position = protocol.position + offset;
     }
 }
