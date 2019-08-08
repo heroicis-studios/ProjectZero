@@ -354,9 +354,9 @@ GameObject:
   - component: {fileID: 821442674}
   - component: {fileID: 821442673}
   - component: {fileID: 821442672}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Protocol
-  m_TagString: Untagged
+  m_TagString: Player Protocol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,7 +369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821442670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 51979782}
@@ -491,7 +491,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 5943
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -634,8 +634,8 @@ GameObject:
   - component: {fileID: 924024003}
   - component: {fileID: 924024002}
   - component: {fileID: 924024001}
-  m_Layer: 0
-  m_Name: PLAYER PROTOCOL
+  m_Layer: 11
+  m_Name: Player Protocol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1073,3 +1073,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d3f3583fa7bb246b44fade70e115ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  protocol: {fileID: 0}
+  protocolYPos: 0
+  ProtocolXandZ: {x: 0, y: 0}

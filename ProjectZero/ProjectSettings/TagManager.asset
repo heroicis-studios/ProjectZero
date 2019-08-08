@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Speed+
+  - Player Protocol
   layers:
   - Default
   - TransparentFX
@@ -17,8 +17,8 @@ TagManager:
   - PostProcessing
   - Obstacle
   - Player
-  - 
-  - 
+  - MainCameraIgnore
+  - MinimapCameraIgnore
   - 
   - 
   - 

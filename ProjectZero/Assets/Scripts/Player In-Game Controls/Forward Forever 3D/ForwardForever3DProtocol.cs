@@ -5,7 +5,8 @@ using UnityEngine;
 public class ForwardForever3DProtocol : MonoBehaviour
 {
     public Transform protocol;
-    public Vector3 offset;
+    public float protocolYPos;
+    public Vector2 ProtocolXandZ;
 
     private Transform player;
 
@@ -16,6 +17,9 @@ public class ForwardForever3DProtocol : MonoBehaviour
 
     private void LateUpdate()
     {
-        protocol.position = protocol.position + offset;
+        float newXPos = protocol.position.x + ProtocolXandZ.x;
+        float newZPos = protocol.position.z + ProtocolXandZ.y;
+        Vector3 newProtocolPosition = new Vector3(newXPos, protocolYPos, newZPos);
+        protocol.position = newProtocolPosition;
     }
 }
