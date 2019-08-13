@@ -4,22 +4,42 @@ using UnityEngine;
 
 public class ForwardForever3DProtocol : MonoBehaviour
 {
-    public Transform protocol;
+    public Transform player;
     public float protocolYPos;
-    public Vector2 ProtocolXandZ;
 
-    private Transform player;
+    private Transform protocol;
+    
+    private float avoidMin;
+    private float avoidMax;
 
     private void Start()
     {
-        player = GetComponent<Transform>();
+        protocol = GetComponent<Transform>();
     }
 
     private void LateUpdate()
     {
-        float newXPos = protocol.position.x + ProtocolXandZ.x;
-        float newZPos = protocol.position.z + ProtocolXandZ.y;
-        Vector3 newProtocolPosition = new Vector3(newXPos, protocolYPos, newZPos);
+        float playerX = player.position.x;
+        float playerZ = player.position.z;
+        Vector3 newProtocolPosition = new Vector3(playerX, protocolYPos, playerZ);
         protocol.position = newProtocolPosition;
+    }
+
+    private void Update()
+    {
+        if (avoidMin << protocol.position.z && protocol.position.z << avoidMax)
+        {
+            protocol.gameObject.SetActive(false);
+        }else
+        {
+            protocol.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        float maxplus = 2.001f;
+        avoidMin = protocol.position.z;
+        avoidMax = protocol.position.z + maxplus;
     }
 }

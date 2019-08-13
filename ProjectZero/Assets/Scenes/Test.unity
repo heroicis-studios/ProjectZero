@@ -354,6 +354,7 @@ GameObject:
   - component: {fileID: 821442674}
   - component: {fileID: 821442673}
   - component: {fileID: 821442672}
+  - component: {fileID: 821442675}
   m_Layer: 11
   m_Name: Protocol
   m_TagString: Player Protocol
@@ -433,6 +434,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821442670}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &821442675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821442670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d3f3583fa7bb246b44fade70e115ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  protocol: {fileID: 0}
+  protocolYPos: 0
+  ProtocolXandZ: {x: 0, y: 0}
 --- !u!1 &852127916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,24 +1071,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc1583b14e62dd142ae13e84b2c51e0c, type: 3}
---- !u!1 &2670230739067393723 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2670230739050164410, guid: fc1583b14e62dd142ae13e84b2c51e0c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2670230739067393722}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2670230739067393724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2670230739067393723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d3f3583fa7bb246b44fade70e115ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  protocol: {fileID: 0}
-  protocolYPos: 0
-  ProtocolXandZ: {x: 0, y: 0}
