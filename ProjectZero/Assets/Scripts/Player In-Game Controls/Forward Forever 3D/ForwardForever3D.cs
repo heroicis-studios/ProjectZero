@@ -11,8 +11,14 @@ public class ForwardForever3D : MonoBehaviour
     public float forwardForce = 2000f;
     public float sidewaysForce = 500f;
     public float jumpForce = 100f;
+    public float speedMultiplier = 1;
 
     public bool canJump = true;
+
+    private void Start()
+    {
+        speedMultiplier = 1;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -43,7 +49,8 @@ public class ForwardForever3D : MonoBehaviour
         }
 
         float VelocityY = rb.velocity.y;
-        Vector3 Velocity = new Vector3(VelocityX, VelocityY, forwardForce * Time.deltaTime);
+        Vector3 velocityBeforeMultiplier = new Vector3(VelocityX, VelocityY, forwardForce * Time.deltaTime);
+        Vector3 Velocity = velocityBeforeMultiplier * speedMultiplier;
         rb.velocity = Velocity;
     }
 

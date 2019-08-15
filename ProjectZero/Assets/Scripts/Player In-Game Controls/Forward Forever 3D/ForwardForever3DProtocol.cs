@@ -15,6 +15,8 @@ public class ForwardForever3DProtocol : MonoBehaviour
     private void Start()
     {
         protocol = GetComponent<Transform>();
+        avoidMin = -1f;
+        avoidMax = -1f;
     }
 
     private void LateUpdate()
@@ -27,12 +29,14 @@ public class ForwardForever3DProtocol : MonoBehaviour
 
     private void Update()
     {
-        if (avoidMin << protocol.position.z && protocol.position.z << avoidMax)
+        if (avoidMin < protocol.position.z && protocol.position.z < avoidMax)
         {
             protocol.gameObject.SetActive(false);
         }else
         {
             protocol.gameObject.SetActive(true);
+            avoidMin = -1f;
+            avoidMax = -1f;
         }
     }
 
