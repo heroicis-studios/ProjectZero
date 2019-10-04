@@ -13,9 +13,9 @@ public class PlayerTriggerF3D : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<PlayerSpeedUp>() != null)
+        if(other.GetComponent<PlayerSpeedUpF3D>() != null)
         {
-            PlayerSpeedUp SpeedUp = other.GetComponent<PlayerSpeedUp>();
+            PlayerSpeedUpF3D SpeedUp = other.GetComponent<PlayerSpeedUpF3D>();
             f3d.speedMultiplier += SpeedUp.playerSpeedChange;
         }
     }

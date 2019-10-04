@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSpeedUp : MonoBehaviour
+public class PlayerSpeedUpF3D : MonoBehaviour
 {
     public int playerSpeedChange;
-
 }
