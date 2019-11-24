@@ -37,7 +37,7 @@ public class PlayerDie : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //checking the 'layer' that the object we collided with is on
-        if (collision.collider.gameObject.layer == 9)
+        if (collision.collider.gameObject.tag == "Obstacle")
         {
             Die();
         }

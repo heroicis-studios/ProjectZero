@@ -17,6 +17,10 @@ public class PlayerTriggerF3D : MonoBehaviour
         {
             PlayerSpeedUpF3D SpeedUp = other.GetComponent<PlayerSpeedUpF3D>();
             f3d.speedMultiplier += SpeedUp.playerSpeedChange;
+        }else if(other.GetComponent<CampaignLevelCompleteF3D>() != null)
+        {
+            CampaignLevelCompleteF3D clc = other.GetComponent<CampaignLevelCompleteF3D>();
+            f3d.isSpeedStatic = true;
         }
     }
 }

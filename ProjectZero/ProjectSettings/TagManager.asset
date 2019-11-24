@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Player Protocol
+  - Obstacle
+  - CamapaignLevelEnd
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Player
   - MainCameraIgnore
   - MinimapCameraIgnore
-  - 
+  - CampaignEnd
   - 
   - 
   - 

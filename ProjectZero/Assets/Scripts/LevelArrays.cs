@@ -19,8 +19,7 @@ public static class LevelArrays
         {
             if(currLevel == F3DScenes[i])
             {
-                int currindex = i;
-                if (currindex == F3DScenes.Length)
+                if (i == F3DScenes.Length)
                 {
                     return -1;
                 }else
