@@ -555,8 +555,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 9, y: 1, z: 9}
+  m_Center: {x: 0, y: -0.67, z: 0}
 --- !u!23 &897089072
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -601,7 +601,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897089070}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &897089074
 Transform:
   m_ObjectHideFlags: 0
@@ -609,13 +609,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897089070}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 3, z: 59}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!114 &897089075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,6 +628,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43a7c26ed3ce0994697484a8d9d27efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lvlCompleteUI: {fileID: 5952669721834742266}
+  NewBkGColour: {r: 0, g: 0, b: 0, a: 1}
+  cam: {fileID: 0}
 --- !u!1 &900422827
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,24 +722,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &921038336 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2670230739050164410, guid: fc1583b14e62dd142ae13e84b2c51e0c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2670230739067393722}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &921038337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921038336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11a0c9130c6ec6040b6254568cc608c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1807518950
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,11 +825,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2670230739050164410, guid: fc1583b14e62dd142ae13e84b2c51e0c,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 2670230739050164412, guid: fc1583b14e62dd142ae13e84b2c51e0c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -899,16 +879,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2670230739050164411, guid: fc1583b14e62dd142ae13e84b2c51e0c,
-        type: 3}
-      propertyPath: sidewaysForce
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 2670230739050164411, guid: fc1583b14e62dd142ae13e84b2c51e0c,
-        type: 3}
-      propertyPath: jumpForce
-      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc1583b14e62dd142ae13e84b2c51e0c, type: 3}
@@ -978,11 +948,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4600156419725712820, guid: 66aed8aa8e42523488d828b5f9fc4798,
-        type: 3}
-      propertyPath: playerSpeedChange
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66aed8aa8e42523488d828b5f9fc4798, type: 3}
@@ -1072,12 +1037,12 @@ PrefabInstance:
     - target: {fileID: 5952669721834742266, guid: 7a84ffda8347b89429f4fb407863b5e2,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 425
       objectReference: {fileID: 0}
     - target: {fileID: 5952669721834742266, guid: 7a84ffda8347b89429f4fb407863b5e2,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 525
       objectReference: {fileID: 0}
     - target: {fileID: 5952669721834742266, guid: 7a84ffda8347b89429f4fb407863b5e2,
         type: 3}

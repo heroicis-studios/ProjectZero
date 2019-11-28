@@ -7,7 +7,13 @@ public class CampaignLevelCompleteF3D : MonoBehaviour
 {
 
     public Transform lvlCompleteUI;
+    public Color NewBkGColour = Color.black;
 
+    private ForwardForever3D f3d;
+
+    [HideInInspector]
+    public Camera cam;
+   
     public void LoadNextLevel()
     {
         Debug.Log(LevelArrays.NextLoadF3D());
@@ -15,7 +21,8 @@ public class CampaignLevelCompleteF3D : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        lvlCompleteUI.gameObject.SetActive(true);   
+        lvlCompleteUI.gameObject.SetActive(true);
+        cam.backgroundColor = NewBkGColour; 
     }
 
 

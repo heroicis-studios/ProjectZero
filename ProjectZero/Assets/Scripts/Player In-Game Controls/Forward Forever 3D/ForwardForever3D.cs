@@ -13,13 +13,15 @@ public class ForwardForever3D : MonoBehaviour
     public float jumpForce = 100f;
     public float speedMultiplier = 1;
     public bool isSpeedStatic = false;
-
     public bool canJump = true;
+
+    [HideInInspector]
+    public Camera cam;
 
     private void Start()
     {
         speedMultiplier = 1;
-        isSpeedStatic = true;
+        isSpeedStatic = false;
     }
 
     // Update is called once per frame

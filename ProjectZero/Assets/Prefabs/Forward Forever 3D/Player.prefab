@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 2670230739050164408}
   - component: {fileID: 2670230739050164411}
   - component: {fileID: 1338498952}
+  - component: {fileID: 921038337}
   m_Layer: 10
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,9 +125,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2670230739050164408}
   forwardForce: 2000
-  sidewaysForce: 70
-  jumpForce: 350
+  sidewaysForce: 250
+  jumpForce: 250
+  speedMultiplier: 1
+  isSpeedStatic: 0
   canJump: 1
+  cam: {fileID: 0}
 --- !u!114 &1338498952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,3 +144,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathHeight: -10
+--- !u!114 &921038337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2670230739050164410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a0c9130c6ec6040b6254568cc608c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
